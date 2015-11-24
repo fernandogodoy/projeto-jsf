@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Principal</title>
+</h:head>
+
+<h:body>
+	<h:panelGroup>
+		<h:messages />
+		<h:form>
+			<p:panelGrid columns="3">
+				<h:outputLabel>Login:</h:outputLabel>
+				<h:inputText id="login" value="#{loginBean.usuario.user}"></h:inputText>
+				<h:message for="login" />
+				<h:outputLabel>Senha:</h:outputLabel>
+				<h:inputSecret  id="senha" value="#{loginBean.usuario.senha}"></h:inputSecret>
+				<h:message for="login" />
+			</p:panelGrid>
+			<p:commandButton value="Enviar" action="#{loginBean.conectar()}"/>
+		</h:form>
+	</h:panelGroup>
+</h:body>
+</html>
+
+

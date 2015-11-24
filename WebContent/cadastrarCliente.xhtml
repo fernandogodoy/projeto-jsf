@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Cadastro de Cliente</title>
+</h:head>
+<h:body>
+	<ui:composition template="layout.xhtml">
+		<ui:define name="content">
+			<h:form>
+				<p:panel header="Cadastro de Clientes">
+					<h:panelGroup>
+						<p:messages />
+						<h:panelGrid columns="3">
+							<p:outputLabel>Nome</p:outputLabel>
+							<p:inputText id="nome" value="#{clienteBean.cliente.nome}" />
+							<p:message for="nome" />
+							<p:outputLabel>Inscrição:</p:outputLabel>
+							<p:inputText id="inscricao" required="true" value="#{clienteBean.cliente.inscricao}" />
+							<p:message for="inscricao" display="text" />
+							<h:outputLabel>Data Nascimento:</h:outputLabel>
+							<p:calendar value="#{clienteBean.cliente.dataNasc}" pattern="dd/mm/yyyy" showOn="button">
+							</p:calendar>
+						</h:panelGrid>
+						<p:commandButton value="Salvar" action="#{clienteBean.salvar()}"
+							icon="ui-icon-disk" />
+					</h:panelGroup>
+				</p:panel>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
+
+
+

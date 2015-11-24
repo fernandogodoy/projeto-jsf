@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<ui:composition>
+		<h:form>
+			<h:outputText value="Bem vindo #{loginBean.usuario.user}"></h:outputText>
+			<p:menubar>
+				<p:menuitem>
+					<h:commandLink action="#{menuBean.principal()}" value="Principal">
+					</h:commandLink>
+				</p:menuitem>
+				<p:menuitem></p:menuitem>
+				<p:menuitem>
+					<h:commandLink action="#{menuBean.cadastrarCliente()}"
+						value="Cadastrar Clientes"></h:commandLink>
+				</p:menuitem>
+				<p:menuitem></p:menuitem>
+				<p:menuitem>
+					<h:commandLink action="#{menuBean.listarCliente()}"
+						value="Listar Clientes"></h:commandLink>
+				</p:menuitem>
+			</p:menubar>
+		</h:form>
+	</ui:composition>
+</h:body>
+</html>
+
