@@ -16,10 +16,4 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
-	 <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>
-        /WEB-INF/persistence.xml,
-        </param-value>
-    </context-param>
 </web-app>
