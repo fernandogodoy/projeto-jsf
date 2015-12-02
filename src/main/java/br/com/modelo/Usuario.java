@@ -1,6 +1,8 @@
 package br.com.modelo;
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable{
 
 	private Long id;
 	private String user;

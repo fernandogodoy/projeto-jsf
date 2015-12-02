@@ -15,7 +15,7 @@ public  class ManagerPersist {
     private static EntityManagerFactory emf;
 
     static {
-        emf = Persistence.createEntityManagerFactory("sistemaAulaPU");
+        emf = Persistence.createEntityManagerFactory("aulaPU");
     }
 
     public static EntityManager getEntityManager() {
